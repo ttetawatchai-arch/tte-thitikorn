@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="th">
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="YQ3CIc9_-oBR_HIZ8SCtzoWQUmP_j24gpbEJMRciEPg" />
+
+    <title>บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด | บริการงานวิศวกรรมครบวงจร</title>
+    <meta name="description" content="บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด (TTE) ผู้นำด้านงานวิศวกรรม งานระบบไฟฟ้าแรงสูง-แรงต่ำ งานก่อสร้างโรงงาน และบำรุงรักษาเครื่องจักร โดยทีมงานมืออาชีพในพื้นที่ปราจีนบุรีและภาคตะวันออก">
+    <meta name="keywords" content="บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง, วิศวกรรมโรงงาน, รับเหมาไฟฟ้าปราจีนบุรี, งานระบบไฟฟ้า MDB, ติดตั้งเครื่องจักร, กบินทร์บุรี">
+    <meta name="author" content="Thitikorn Thai Engineering">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    </head>
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef5fc 0%, #d6e6f7 100%); /* ธีมฟ้าอ่อน-น้ำเงินอ่อน */
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        /* ----------------------------------------- */
+        /* แถบข้อความวิ่ง (Announcement Bar) */
+        /* ----------------------------------------- */
+        .marquee-container {
+            background: #002347; /* น้ำเงินเข้มตัดสีทอง */
+            color: #fff;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: 500;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #dfb15b;
+        }
+
+        .marquee-text {
+            white-space: nowrap;
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            padding-left: 100%;
+        }
+
+        .marquee-text span {
+            color: #f7d070; /* ตัวหนังสือวิ่งสีทอง */
+            font-weight: 600;
+        }
+        
+        .job-badge {
+            background: linear-gradient(45deg, #dfb15b, #b38528);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(223, 177, 91, 0.5);
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* ส่วนหัวและเมนูนำทาง */
+        header {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%); /* ธีมน้ำเงินอ่อน/น้ำเงินวิศวกรรม */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .company-logo {
+            height: 75px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover .company-logo {
+            transform: scale(1.05);
+        }
+
+        .logo h1 {
+            font-size: 19px;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        
+        .logo span {
+            display: block;
+            font-size: 12px;
+            color: #f3c159; /* สีทองหัวข้อรอง */
+            font-weight: 400;
+            margin-top: 2px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #002347;
+            background-color: #f3c159; /* ไฮไลท์สีทองเวลาเลือก */
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(243, 193, 89, 0.3);
+        }
+
+        /* ส่วนเนื้อหาหลัก */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            min-height: 500px;
+        }
+
+        /* การแสดงผลหน้า */
+        .page-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(30, 60, 114, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ----------------------------------------- */
+        /* ตกแต่งหัวข้อสีทอง (Golden Headings) */
+        /* ----------------------------------------- */
+        h2 {
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #dfb15b;
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+
+        h3 {
+            background: linear-gradient(135deg, #d4af37 0%, #b38528 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 600;
+            border-left: 5px solid #dfb15b;
+            padding-left: 15px;
+        }
+
+        h4 {
+            color: #ac7d14; /* สีทองเข้มเพื่อให้ลอยเด่นบนพื้นหลังสว่าง */
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #4a5568;
+            text-indent: 30px;
+            text-align: justify;
+        }
+        
+        p.no-indent {
+            text-indent: 0px;
+        }
+
+        /* แบนเนอร์หน้าแรก */
+        .hero-banner {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(42, 82, 152, 0.85)), url('https://img2.pic.in.th/146286_pic_172fdc7bb1ad84ab8.gif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+        }
+
+        .hero-banner h3 {
+            font-size: 32px;
+            margin-bottom: 0;
+            background: linear-gradient(135deg, #fff 0%, #f3c159 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-left: none;
+            padding-left: 0;
+            font-weight: 700;
+        }
+
+        /* การจัดวางแบบ Grid และการ์ดข้อมูล */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f4f8fd; /* สีฟ้าอ่อนนุ่มนวล */
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 4px solid #dfb15b; /* ขอบบนสีทอง */
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(30, 60, 114, 0.08);
+            background: #ecf3fa;
+        }
+        
+        .card p {
+            text-indent: 0;
+            margin-bottom: 0;
+        }
+
+        .sub-card {
+            background: #ffffff;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 8px;
+            border: 1px solid #d6e6f7;
+            font-size: 15px;
+        }
+
+        .sub-card strong {
+            color: #1e3c72;
+        }
+
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 5px;
+            margin-bottom: 20px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #4a5568;
+        }
+
+        .bullet-list li::before {
+            content: "✦";
+            color: #dfb15b; /* จุดหัวข้อไอคอนสีทอง */
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* แกลเลอรีรูปภาพผลงาน */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .project-item {
+            background: #ffffff;
+            border: 1px solid #eef2f7;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(30, 60, 114, 0.12);
+        }
+
+        .project-img-wrapper {
+            width: 100%;
+            height: 240px;
+            background-color: #eaedf2;
+            overflow: hidden;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .project-desc {
+            padding: 18px 15px;
+            background: #ffffff;
+            border-top: 1px solid #f0f4f8;
+            font-weight: 500;
+            color: #2c3e50;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* ----------------------------------------- */
+        /* สไตล์โซน QR Code ที่เพิ่มเข้ามาใหม่ */
+        /* ----------------------------------------- */
+        .qrcode-section {
+            grid-column: 1 / -1;
+            background: #f4f8fd;
+            border-radius: 12px;
+            border-top: 4px solid #dfb15b;
+            padding: 30px;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.04);
+        }
+
+        .qrcode-wrapper {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 15px;
+            display: inline-block;
+            max-width: 220px;
+        }
+
+        .qrcode-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ส่วนติดต่อเรา */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(30, 60, 114, 0.08);
+            border: 2px solid #ffffff;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* ส่วนท้ายเว็บไซต์ */
+        footer {
+            background: #001833;
+            color: #a3b8cc;
+            text-align: center;
+            padding: 25px;
+            margin-top: 80px;
+            font-size: 14px;
+            border-top: 3px solid #dfb15b;
+        }
+        
+        footer p {
+            text-align: center;
+            text-indent: 0;
+            margin-bottom: 0;
+            color: #a3b8cc;
+        }
+
+        /* ตอบสนองบนมือถือ */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .page-section {
+                padding: 25px 20px;
+            }
+            h2 { font-size: 24px; }
+            h3 { font-size: 19px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <div class="marquee-text">
+            <span class="job-badge">📢 ด่วน! เปิดรับสมัคร</span> 
+            <span>บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด เปิดรับสมัครพนักงานช่าง จำนวนหลายอัตรา ไม่ว่าท่านจะจบการศึกษาตั้งแต่ระดับชั้น ป.6 จนถึง ระดับ ปวส. ก็สามารถยื่นใบสมัครเพื่อร่วมงานกับเราได้ทันที! โทรสอบถามเพิ่มเติมได้ที่ 086-154-6265</span>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://img2.pic.in.th/ChatGPT_Image_29_.._2569_14_55_05-removebg-preview.png" alt="Thitikorn Thai Engineering Logo" class="company-logo">
+                <div class="logo">
+                    <h1>บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด</h1>
+                    <span>(สำนักงานใหญ่)</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="switchPage('home')" id="nav-home" class="active">หน้าแรก</a></li>
+                <li><a onclick="switchPage('about')" id="nav-about">เกี่ยวกับเรา</a></li>
+                <li><a onclick="switchPage('services')" id="nav-services">บริการทางบริษัท</a></li>
+                <li><a onclick="switchPage('project')" id="nav-project">ผลงาน/โปรเจกต์</a></li>
+                <li><a onclick="switchPage('knowledge')" id="nav-knowledge">คลังความรู้</a></li>
+                <li><a onclick="switchPage('contact')" id="nav-contact">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="home" class="page-section active">
+            <div class="hero-banner">
+                <h3>มุ่งหน้าสู่ความเป็นเลิศด้านวิศวกรรมที่มั่นคง</h3>
+            </div>
+            <h2>ยินดีต้อนรับสู่ บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด (สำนักงานใหญ่)</h2>
+            <p>เราคือผู้นำทางด้านบริการงานวิศวกรรมที่ได้รับความไว้วางใจมาอย่างยาวนาน ด้วยการทำงานที่ยึดหลักมาตรฐานสากล ความปลอดภัย และการส่งมอบงานตรงเวลา ทำให้เราได้รับความไว้วางใจจากกลุ่มลูกค้าทั้งภาครัฐและเอกชน</p>
+            <p>วิสัยทัศน์ของเราคือการสร้างสรรค์ผลงานวิศวกรรมที่มีคุณภาพ พัฒนานวัตกรรมใหม่อย่างต่อเนื่อง และเติบโตไปพร้อมกับความสำเร็จของพันธมิตรและลูกค้าทุกท่าน</p>
+            
+            <h3>ผลงานเด่นและการปฏิบัติงานหน้างาน</h3>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/131940c3de39920af45e91.jpg" alt="งานตรวจสอบวัดค่าความเป็นฉนวน">
+                    </div>
+                    <div class="project-desc">งานตรวจสอบบำรุงรักษาตู้เมนกระจายกำลังไฟฟ้า (MDB)</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img1.pic.in.th/images/16791a427396ea765.png" alt="งานซ่อมบำรุงหรือติดตั้งระบบไฟฟ้าแรงสูง">
+                    </div>
+                    <div class="project-desc">การปฏิบัติงานบนที่สูงของเสาไฟฟ้าแรงสูง</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/3b298f739646cc066.jpg" alt="งานตรวจสอบ ซ่อมบำรุง หรือติดตั้งตู้ควบคุมไฟฟ้า (Main Distribution Board - MDB)">
+                    </div>
+                    <div class="project-desc">งานตรวจสอบ ตู้ควบคุมไฟฟ้าของโรงงาน</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-section">
+            <h2>เกี่ยวกับบริษัท</h2>
+            <p><strong>บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด</strong> จุดเริ่มต้นธุรกิจ: ก่อตั้งขึ้นครั้งแรกในรูปแบบห้างหุ้นส่วนจำกัดเมื่อปี พ.ศ. 2550 ดำเนินงานโดยทีมงานคนไทย เพื่อรองรับกลุ่มลูกค้าโรงงานอุตสาหกรรมในพื้นที่ภาคตะวันออก</p>
+            <p>การเติบโตและแปรสภาพ: จากการขยายตัวของงานและฐานลูกค้าที่เพิ่มขึ้นอย่างต่อเนื่อง จึงได้จดทะเบียนแปรสภาพเป็น บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด (เลขทะเบียนธุรกิจ: 0255562000570) เพื่อยกระดับมาตรฐานการบริหารงานและรองรับโครงการขนาดใหญ่</p>
+            
+            <h3>ความสำคัญและขอบเขตบริการ</h3>
+            <p>เราเล็งเห็นถึงความสำคัญของระบบวิศวกรรมที่มีประสิทธิภาพและปลอดภัยในภาคอุตสาหกรรม จึงมุ่งมั่นให้บริการครอบคลุมขอบเขตงานวิศวกรรมหลากหลายด้าน เพื่อตอบสนองทุกความต้องการของลูกค้าอย่างครบวงจร ดังนี้</p>
+            <ul class="bullet-list">
+                <li><strong>งานก่อสร้างอุตสาหกรรม:</strong> มุ่งเน้นการก่อสร้างอาคารที่ไม่ใช่ที่พักอาศัย เช่น อาคารโรงงาน คลังสินค้า และโครงสร้างฐานรากสำหรับเครื่องจักร</li>
+                <li><strong>งานระบบท่อและทางน้ำ:</strong> ติดตั้งและดูแลระบบท่อส่งในอุตสาหกรรม (Piping Work) รวมถึงระบบบำบัดและจัดสรรน้ำภายในโรงงาน</li>
+                <li><strong>งานระบบไฟฟ้า:</strong> ออกแบบและวางระบบไฟฟ้ากำลัง ไฟฟ้าควบคุม และระบบส่องสว่างที่ได้มาตรฐานความปลอดภัยสูง</li>
+                <li><strong>งานติดตั้งและย้ายเครื่องจักร:</strong> บริการติดตั้ง ประกอบ และซ่อมบำรุงระบบเครื่องจักรกลหนักที่ใช้ในกระบวนการผลิต</li>
+                <li><strong>และงานอื่นๆ อีกมากมาย:</strong> เรายังพร้อมให้บริการงานวิศวกรรมเฉพาะทาง ปรับปรุงซ่อมบำรุง (Renovation & Maintenance) และงานสนับสนุนโรงงานอุตสาหกรรมในด้านอื่นๆ ตามที่ลูกค้าต้องการ</li>
+            </ul>
+
+            <h3>ค่านิยมองค์กร (Core Values)</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>T - Trust (ความไว้วางใจ)</h4>
+                    <p>สร้างความเชื่อมั่นให้กับลูกค้าด้วยการทำงานที่ซื่อสัตย์และได้มาตรฐาน</p>
+                </div>
+                <div class="card">
+                    <h4>K - Knowledge (ความรู้เชี่ยวชาญ)</h4>
+                    <p>พัฒนาความรู้และความเชี่ยวชาญทางวิศวกรรมอย่างไม่หยุดยั้ง</p>
+                </div>
+                <div class="card">
+                    <h4>E - Excellence (ความเป็นเลิศ)</h4>
+                    <p>มุ่งมั่นส่งมอบผลงานที่ดีที่สุดในทุกๆ โปรเจกต์</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="page-section">
+            <h2>บริการทางบริษัท</h2>
+            
+            <h3>1. ขอบเขตหน้างาน (ประเภทของงาน)</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>📐 งานออกแบบและคำนวณ</h4>
+                    <p>วางแผนตำแหน่งการติดตั้งอุปกรณ์ตรวจจับและตู้ควบคุมให้ครอบคลุมตามมาตรฐานวิศวกรรม เช่น มาตรฐานของวิศวกรรมสถานแห่งประเทศไทย (วสท.) หรือ NFPA</p>
+                </div>
+                <div class="card">
+                    <h4>🛠️ งานติดตั้งระบบ (Installation)</h4>
+                    <p>การเดินท่อร้อยสายไฟ (Conduit) การลากสายสัญญาณชนิดทนไฟ (FRC) และการติดตั้งอุปกรณ์ต่าง ๆ</p>
+                </div>
+                <div class="card">
+                    <h4>🧪 งานทดสอบและตั้งค่าระบบ (Commissioning)</h4>
+                    <p>การทดสอบจำลองเหตุการณ์จริงเพื่อเช็คว่าระบบลิงก์กันถูกต้องหรือไม่ และตั้งค่าโปรแกรมบนตู้ควบคุม</p>
+                </div>
+                <div class="card">
+                    <h4>🔧 งานบำรุงรักษา (PM - Preventive Maintenance)</h4>
+                    <p>การตรวจเช็คระบบตามรอบ (เช่น ทุกเดือน หรือทุกปี) ทำความสะอาดตัวตรวจจับควันเพื่อลดปัญหา False Alarm และเช็คแบตเตอรี่สำรอง</p>
+                </div>
+            </div>
+
+            <h3>2. องค์ประกอบหลักของระบบที่ต้องดูแล</h3>
+            <p class="no-indent" style="margin-bottom: 10px;">งานนี้จะเกี่ยวข้องกับกลุ่มระบบและอุปกรณ์ไฟฟ้าสำคัญหลัก ๆ ดังนี้:</p>
+            <div style="background: #ffffff; padding: 10px 20px; border: 1px solid #d6e6f7; border-radius: 12px;">
+                <div style="margin-bottom: 15px; margin-top: 10px;">
+                    <strong style="color:#ac7d14;">• 1. ระบบไฟฟ้าแรงสูง (High Voltage System)</strong>
+                    <div class="sub-card">
+                        - <strong>ระบบไฟฟ้านอกและภายในโรงงาน:</strong> การดูแลและติดตั้งระบบส่งจ่ายกำลังไฟฟ้าแรงสูงเพื่อรองรับการใช้งานของเครื่องจักรขนาดใหญ่<br>
+                        - <strong>สถานีไฟฟ้าย่อยและหม้อแปลง:</strong> การตรวจสอบ ดูแล และติดตั้งระบบที่เกี่ยวข้องกับหม้อแปลงไฟฟ้าโรงงาน
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <strong style="color:#ac7d14;">• 2. ระบบไฟฟ้าแรงต่ำ (Low Voltage System)</strong>
+                    <div class="sub-card">
+                        - <strong>ระบบกระจายกำลังไฟฟ้า:</strong> การเดินสายไฟ เมนไฟฟ้า และการจัดทำระบบจ่ายไฟไปยังพื้นที่ต่าง ๆ ทั่วทั้งโรงงาน<br>
+                        - <strong>ตู้ควบคุมไฟฟ้า (Main Distribution Board - MDB):</strong> การประกอบ ติดตั้ง และตรวจสอบตู้ควบคุมไฟ ตู้เบรกเกอร์ และแผงสวิตช์ควบคุมหลัก
+                    </div>
+                </div>
+            </div>
+
+            <h3>3. รูปแบบระบบที่นิยมใช้ในงาน</h3>
+            <p class="no-indent" style="margin-bottom: 15px;">ในการทำงานจริง จะเจอกลุ่มเทคโนโลยีระบบหลัก ๆ อยู่ 2 ประเภท:</p>
+            <div class="grid-2" style="margin-top: 0;">
+                <div class="card" style="border-top-color: #dfb15b;">
+                    <h4>📍 ระบบแบบแบ่งโซน (Conventional System)</h4>
+                    <p>บอกได้แค่ว่าเกิดเหตุที่โซนไหนหรือชั้นไหน แต่ระบุตัวอุปกรณ์เป๊ะ ๆ ไม่ได้ เหมาะกับอาคารขนาดเล็ก</p>
+                </div>
+                <div class="card" style="border-top-color: #dfb15b;">
+                    <h4>🎯 ระบบแบบระบุตำแหน่งได้ (Addressable System)</h4>
+                    <p>หน้าจอที่ตู้ควบคุมจะบอกชื่อและตำแหน่งของอุปกรณ์ตัวที่จับความผิดปกติได้ทันที เหมาะกับอาคารขนาดใหญ่ โรงงาน หรืออาคารสูง</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project" class="page-section">
+            <h2>ภาพการปฏิบัติงานและโปรเจกต์ของบริษัท</h2>
+            <p>ประมวลภาพความมุ่งมั่นตั้งใจของทีมงานวิศวกรและช่างเทคนิคจาก TTE ในโครงการและหน้างานจริงประเภทต่าง ๆ เพื่อส่งมอบงานระบบวิศวกรรมที่ได้มาตรฐานและปลอดภัยสูงสุด</p>
+            
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/131940.jpg" alt="การวัดค่าด้วย Fluke 1587">
+                    </div>
+                    <div class="project-desc">การใช้เครื่องมือ Fluke 1587 ทดสอบระบบวัดค่าความต้านทานฉนวน</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/131941.jpg" alt="แสดงหน้าจอการวัดทดสอบ 550 M Ohms">
+                    </div>
+                    <div class="project-desc">ผลการทดสอบค่าความเป็นฉนวนไฟฟ้าที่ได้มาตรฐานความปลอดภัย (550 MΩ)</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img1.pic.in.th/images/16791a427396ea765.png" alt="งานไฟฟ้าแรงสูง">
+                    </div>
+                    <div class="project-desc">งานซ่อมบำรุงหรือติดตั้งระบบไฟฟ้าแรงสูง</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/297ba756ca679dec7.jpg" alt="งานตู้ควบคุม">
+                    </div>
+                    <div class="project-desc">งานติดตั้งตู้ควบคุมไฟฟ้าโรงงานแรงสูง</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img1.pic.in.th/images/4991ea5bedfb48cca.jpg" alt="งานสายไฟแรงสูง">
+                    </div>
+                    <div class="project-desc">งานตรวจสอบและซ่อมบำรุงอุปกรณ์ไฟฟ้าแรงสูง</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/1058b9d6fd83d17c98.jpg" alt="งานแอร์">
+                    </div>
+                    <div class="project-desc">งานติดตั้งแอร์และตรวจสอบการทำงานของแอร์</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img1.pic.in.th/images/S__9609247_0.jpg" alt="การเดินสายตู้คอนโทรล">
+                    </div>
+                    <div class="project-desc">ทีมงาน TTE กำลังจัดระเบียบสายไฟและเดินตู้คอนโทรล</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/117157_0.jpg" alt="งานเดินสายไฟเข้าตู้">
+                    </div>
+                    <div class="project-desc">งานเดินสายไฟเข้าตู้คอนโทลหลักของของจักร</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img-wrapper">
+                        <img src="https://img2.pic.in.th/123127.jpg" alt="งานเดินสายตู้ควบคุมไฟฟ้า (Electrical Control Panel / MDB)">
+                    </div>
+                    <div class="project-desc">งานตรวจสอบ บำรุงรักษา หรือซ่อมบำรุงระบบไฟฟ้าภายในตู้ควบคุมไฟฟ้า (Electrical Control Panel / MDB)</div>
+                </div>
+
+                <div class="project-item" style="grid-column: 1 / -1; margin-top: 15px;">
+                    <div class="project-img-wrapper" style="height: 420px;">
+                        <img src="https://img1.pic.in.th/images/262393.jpg" alt="กิจกรรมประชุมก่อนเริ่มปฏิบัติงานตอนเช้า">
+                    </div>
+                    <div class="project-desc" style="font-size: 16px; font-weight: 600; padding: 22px;">
+                        🌅 กิจกรรมการประชุมย่อยก่อนเริ่มปฏิบัติงานตอนเช้า เวลา 08:00 น. (Morning Talk / Tool Box Talk) <br>
+                        <span style="font-size: 14px; color: #666; font-weight: 400; display: block; margin-top: 5px;">
+                            ทีมงานร่วมประชุมชี้แจงขั้นตอนการทำงาน ตรวจสอบความพร้อมของร่างกาย เครื่องมือ และเน้นย้ำความปลอดภัย (Safety First) ก่อนเข้าปฏิบัติงานในไซต์งานจริงทุกครั้ง
+                        </span>
+                    </div>
+                </div>
+
+                <!-- ----------------------------------------- -->
+                <!-- ส่วนแสกน QR Code ที่เพิ่มเข้ามาใหม่ใต้หน้าโปรเจกต์ -->
+                <!-- ----------------------------------------- */ -->
+                <div class="qrcode-section">
+                    <h4 style="color: #b38528; justify-content: center; margin-bottom: 15px;">📲 แสกนเพื่อดูข้อมูลเพิ่มเติมและโปคเจคต์ที่ดำเนินการเรียบร้อย</h4>
+                    <div class="qrcode-wrapper">
+                        <!-- นำลิงก์รูปภาพ QR Code ของคุณมาใส่ที่ช่อง src ด้านล่างนี้ได้เลยครับ -->
+                        <img src="https://img2.pic.in.th/--TTE-PROFILE_2026-_EE-System-qrcode.png" alt="QR Code สำหรับติดต่อสอบถาม">
+                    </div>
+                    <p class="no-indent" style="font-size: 15px; color: #5a6578; font-weight: 500;">
+                        สามารถแสกน QR Code เพื่อดูโปรเจคต์ของทางบริษัทเรา // ขอบคุณครับ/ค่ะ
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="knowledge" class="page-section">
+            <h2>ความรู้และสาระน่ารู้ด้านวิศวกรรม</h2>
+            <p>บทความและเกร็ดความรู้โดยทีมวิศวกร บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด เพื่อความปลอดภัยและการบำรุงรักษาที่ถูกวิธี</p>
+            
+            <div class="card" style="margin-bottom: 25px;">
+                <h4 style="color: #b38528;">💡 เกร็ดความรู้: การตรวจสอบระบบไฟฟ้าประจำปีสำคัญอย่างไร?</h4>
+                <p class="no-indent">การตรวจสอบระบบไฟฟ้าในโรงงานประจำปี ไม่ใช่แค่เรื่องของการทำตามกฎหมายกำหนดเท่านั้น แต่เป็นการป้องกันอัคคีภัยที่เกิดจากไฟฟ้าลัดวงจรล่วงหน้า ทีมวิศวกรของเราแนะนำให้ตรวจวัดอุณหภูมิของเบรกเกอร์ด้วยกล้องถ่ายภาพความร้อน (Thermo Scan) เพื่อหาจุดที่หลวมหรือโหลดเกินก่อนที่จะเกิดความเสียหายร้ายแรง</p>
+            </div>
+
+            <div class="card">
+                <h4 style="color: #b38528;">💡 ข้อควรรู้เกี่ยวกับ "โครงสร้างเหล็ก" เทียบกับ "โครงสร้างคอนกรีต"</h4>
+                <p class="no-indent">โครงสร้างเหล็กรูปพรรณ (Structural Steel) กำลังเป็นที่นิยมมากในการสร้างโรงงานยุคใหม่เนื่องจาก ก่อสร้างได้รวดเร็ว ลดแรงงานหน้างาน และสามารถควบคุมคุณภาพได้ดีจากโรงงานผลิต แต่ข้อควรระวังคือเรื่องการเคลือบสีกันสนิมและระบบป้องกันไฟไหม้ ซึ่งต้องได้รับการคำนวณโดยวิศวกรอย่างถูกต้อง</p>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section">
+            <h2>ติดต่อเรา</h2>
+            <p>หากคุณมีข้อสงสัย ต้องการคำปรึกษาด้านวิศวกรรม หรือขอใบเสนอราคา สามารถติดต่อเราได้ตามช่องทางด้านล่างนี้</p>
+            
+            <div class="contact-wrapper">
+                <div class="card" style="border-top-color: #dfb15b;">
+                    <p style="margin-bottom: 12px;"><strong>📍 ที่ตั้งสำนักงาน:</strong> 38/3 หมู่ที่ 1 ถนน 304 ตำบลลาดตะเคียน อำเภอกบินทร์บุรี จังหวัดปราจีนบุรี 25110</p>
+                    <p style="margin-bottom: 12px;"><strong>📞 เบอร์โทรศัพท์:</strong> 086-154-6265 / 086-3026909 </p>
+                    <p style="margin-bottom: 12px;"><strong>✉️ อีเมล:</strong> tte.thitikorn@gmail.com</p>
+                    <p><strong>🌐 เวลาทำการ:</strong> จันทร์ - เสาร์ (08:00 น. - 17:00 น.)</p>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.7634560410497!2d101.691799!3d13.91262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311cf15239b98b95%3A0x6bfe76e0176df912!2zMzgvMyBNb28gMSwgMzA0IFJkLCBMYWQgVGFraGlhbiwgS2FiaW4gQnVyaSBEaXN0cmljdCwgUHJhY2hpbiBCdXJpIDI1MTEw!5e0!3m2!1sth!2sth!4v1710000000000!5m2!1sth!2sth" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 บริษัท ฐิติกรไทยเอ็นจิเนียริ่ง จำกัด. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function switchPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('nav-' + pageId).classList.add('active');
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
